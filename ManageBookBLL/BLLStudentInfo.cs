@@ -12,7 +12,6 @@ namespace ManageBook.BLL
     public class BLLStudentInfo
     {
         private DALStudentInfo dalstudentInfo = new DALStudentInfo();
-        private DataTable dt;
         public List<StudentInfoBusiness> GetAllStudentInfo(string Guanjianzi , string txt)
         {
             return dalstudentInfo.GetAllStudentInfo(Guanjianzi, txt);

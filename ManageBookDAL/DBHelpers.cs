@@ -11,6 +11,7 @@ namespace ManageBook.DAL
 {
     public class DBHelpers
     {
+
         public static readonly string Connection = ConfigurationManager.ConnectionStrings["Data.Sourse.Connection"].ConnectionString.ToString();
 
         public static SqlDataReader GetAllInfo(string sql)  //返回值为SqlDataReader对象的查询方法

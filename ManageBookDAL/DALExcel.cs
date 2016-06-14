@@ -45,7 +45,7 @@ namespace ManageBook.DAL
             {
                 using (SqlBulkCopy sqlcopy = new SqlBulkCopy(DBHelpers.Connection, SqlBulkCopyOptions.UseInternalTransaction))
                 {
-                    sqlcopy.DestinationTableName = TableName;
+                    sqlcopy.DestinationTableName = TableName;  
                     sqlcopy.BulkCopyTimeout = 300;
                     for (int i = 0; i < srcColumns.Length; i++)
                     {
@@ -54,7 +54,18 @@ namespace ManageBook.DAL
                     try
                     {
                         sqlcopy.WriteToServer(dt);
-                        flag = true;
+                        string sql = "insert into StudentInfo SELECT  StudentClass.StudentClassID, TemporaryStudentInfo.StudentName, TemporaryStudentInfo.StudentNumber, TemporaryStudentInfo.StudentSex, TemporaryStudentInfo.StudentMarket FROM  TemporaryStudentInfo INNER JOIN StudentClass ON TemporaryStudentInfo.StudentClassName = StudentClass.ClassName left join StudentInfo on TemporaryStudentInfo.StudentNumber=StudentInfo.StudentNumber where StudentInfo.StudentNumber is null";
+                        string sql1 = "truncate table TemporaryStudentInfo";
+                        SqlCommand scm = new SqlCommand(sql,conn);
+                        SqlCommand cmd = new SqlCommand(sql1, conn);
+                        conn.Open();
+                        CommonStatic.recordNum = scm.ExecuteNonQuery();
+                        if (CommonStatic.recordNum > 0)
+                        {
+                            flag = true;
+                        }
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
                     }
                     catch (Exception)
                     {

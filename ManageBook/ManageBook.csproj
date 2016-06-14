@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonStatic.cs" />
     <Compile Include="FrmAddBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +195,10 @@
     <ProjectReference Include="..\ManageBookBLL\ManageBookBLL.csproj">
       <Project>{758F22FA-45EF-40A6-86DF-C521B8C5C7CE}</Project>
       <Name>ManageBookBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManageBookDAL\ManageBookDAL.csproj">
+      <Project>{dca7360b-e27e-428d-a3db-3f0f1088f705}</Project>
+      <Name>ManageBookDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\ManageBookModle\ManageBookModle.csproj">
       <Project>{7F567F95-C6F1-47A7-8831-75BAEDE93304}</Project>

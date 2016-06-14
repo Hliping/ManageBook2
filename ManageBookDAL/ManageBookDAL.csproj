@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonStatic.cs" />
     <Compile Include="DALBookStock.cs" />
     <Compile Include="DALCommon.cs" />
     <Compile Include="DALExamineBook.cs" />
@@ -59,12 +60,6 @@
     <Compile Include="DALResultExamine.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ManageBookModle\ManageBookModle.csproj">
-      <Project>{7F567F95-C6F1-47A7-8831-75BAEDE93304}</Project>
-      <Name>ManageBookModle</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManageBookModle\ManageBookModle.csproj">
+      <Project>{7f567f95-c6f1-47a7-8831-75baede93304}</Project>
+      <Name>ManageBookModle</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using ManageBook.BLL;
+using ManageBook.DAL;
 using ManageBook.Modle;
 
 namespace ManageBook
@@ -136,6 +137,7 @@ namespace ManageBook
                 string openFile = open.FileName;
                 DataSet ds= excel.ExcelToDataSet(openFile);
                 CommonStatic.dt = ds.Tables[0];
+                CommonStatic.recordNum = CommonStatic.dt.Rows.Count;
                 FrmExcel frm = new FrmExcel();
                 frm.Show();
                 frm.dgvExcel.DataSource = CommonStatic.dt;

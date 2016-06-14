@@ -9,11 +9,10 @@ namespace ManageBook.Modle
     {
         public int StudentInfoID { get; set; }
         public int StudentClassID { get; set; }
-        public int CollegeID{ get; set; }
-        public int MajorInfoID { get; set; }
-        public int GradeInfoID { get; set; }
         public string StudentName { get; set; }
         public string StudentNumber { get; set; }
+        public string StudentSex { get; set; }
+        public string StudentMarket { get; set; }
 
     }
 }

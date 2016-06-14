@@ -43,8 +43,8 @@ namespace ManageBook.DAL
             MajorInfo major;
             List<MajorInfo> list = new List<MajorInfo>();
             string sql = "select * from MajorInfo where CollegeID=@CollegeID";
-            SqlParameter[] parameter = { new SqlParameter("@CollegeID", SqlDbType.Int) };
-            parameter[0].Value = collegeID;
+            SqlParameter[] parameter = { new SqlParameter("@CollegeID", collegeID) };
+            //parameter[0].Value = collegeID;
             using (SqlDataReader sdr = DBHelpers.GetAllInfo(sql, parameter))
             {
                 while (sdr.Read())
@@ -77,6 +77,25 @@ namespace ManageBook.DAL
                 }
             }
 
+            return list;
+        }
+        public List<StudentClass> GetAllStudentClass(int majorInfoID,int gradeInfoID) //以专业编号和年级编号获取班级信息的方法
+        {
+            StudentClass student;
+            List<StudentClass> list = new List<StudentClass>();
+            string sql = "select * from StudentClass where MajorInfoID=@majorInfoID and GradeInfoID=@gradeInfoID";
+            SqlParameter[] parameter = { new SqlParameter("@majorInfoID", majorInfoID),
+                                         new SqlParameter("@gradeInfoID", gradeInfoID)};
+            using (SqlDataReader sdr = DBHelpers.GetAllInfo(sql, parameter))
+            {
+                while (sdr.Read())
+                {
+                    student = new StudentClass();
+                    student.StudentClassID = int.Parse(sdr["StudentClassID"].ToString());
+                    student.ClassName = sdr["ClassName"].ToString();
+                    list.Add(student);
+                }
+            }
             return list;
         }
         public List<SchoolTerm> GetAllSchoolTerm() //获取学年学期的方法
@@ -149,6 +168,23 @@ namespace ManageBook.DAL
                 }
             }
             return student;
+        }
+        public List<GradeInfo> GetAllGradeInfo()
+        {
+            List<GradeInfo> list = new List<GradeInfo>();
+            string sql = "select * from GradeInfo";
+            using (SqlDataReader sdr = DBHelpers.GetAllInfo(sql))
+            {
+                while (sdr.Read())
+                {
+                    GradeInfo grade = new GradeInfo();
+                    grade.GradeInfoID = Convert.ToInt32(sdr["GradeInfoID"]);
+                    grade.GradeName = sdr["GradeName"].ToString();
+                    grade.GradeSimple = sdr["GradeSimple"].ToString();
+                    list.Add(grade);
+                }
+            }
+            return list;
         }
     }
 }

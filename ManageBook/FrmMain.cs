@@ -79,5 +79,11 @@ namespace ManageBook
             FrmStudentInfoMoney frm = new FrmStudentInfoMoney();
             FrmShow(frm);
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            FrmStudentInfo frm = new FrmStudentInfo();
+            FrmShow(frm);
+        }
     }
 }

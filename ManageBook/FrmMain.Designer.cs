@@ -173,6 +173,7 @@
             this.button11.TabIndex = 7;
             this.button11.Text = "学生信息管理";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -191,7 +192,7 @@
             this.pnlMainCentre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMainCentre.Location = new System.Drawing.Point(12, 70);
             this.pnlMainCentre.Name = "pnlMainCentre";
-            this.pnlMainCentre.Size = new System.Drawing.Size(1339, 688);
+            this.pnlMainCentre.Size = new System.Drawing.Size(1339, 678);
             this.pnlMainCentre.TabIndex = 2;
             // 
             // FrmMain

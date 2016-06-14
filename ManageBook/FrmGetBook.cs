@@ -177,7 +177,6 @@ namespace ManageBook
         private void btnSelect_Click(object sender, EventArgs e)
         {
             string txt = cmbInformation.SelectedItem.ToString();
-            
             switch (txt)
             {
                 case "教材名称":

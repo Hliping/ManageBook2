@@ -31,7 +31,7 @@ namespace ManageBook
             //dgvPlanBook.DataSource = planbook.DelectPlanBook();
         }
 
-        public void CmbData()  //查询各个表的信息赋值给下拉框
+        private void CmbData()  //查询各个表的信息赋值给下拉框
         {
             //cmbCollege.Items.Insert(0, "——请选择学院——"); //添加下拉框第一项的值
             List<CollegeInfo> collegeinfo = common.GetAllCollegeInfo();         //调用GetAllCollegeInfo()方法获取学院信息并赋值给数组a
@@ -68,12 +68,11 @@ namespace ManageBook
 
         private void cmbstudentclass(int collegeID)
         {
-
             List<StudentClass> studentclass = common.GetAllStudentClass(collegeID);
-            studentclass.Insert(0, new StudentClass { ClassName = "——请选择班级——",StudentClassID=0 });
-            cmbStudentClass.DataSource = studentclass;
+            studentclass.Insert(0, new StudentClass { ClassName = "——请选择班级——",StudentClassID=0 });    
             cmbStudentClass.DisplayMember = "ClassName";
             cmbStudentClass.ValueMember = "StudentClassID";
+            cmbStudentClass.DataSource = studentclass;
         }
         public void PlanBookinfo()  //多表联合查询并且为列表绑定数据源
         {

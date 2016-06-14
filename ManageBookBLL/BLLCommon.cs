@@ -26,11 +26,14 @@ namespace ManageBook.BLL
             return common.GetAllMajorInfo(collegeID);
         }
 
-        public List<StudentClass> GetAllStudentClass(int collegeID) //获取班级信息的方法
+        public List<StudentClass> GetAllStudentClass(int collegeID) //以学院编号获取班级信息的方法
         {
             return common.GetAllStudentClass(collegeID);
         }
-
+        public List<StudentClass> GetAllStudentClass(int majorInfoID, int gradeInfoID) //以专业编号和年级编号获取班级信息的方法
+        {
+            return common.GetAllStudentClass(majorInfoID, gradeInfoID);
+        }
         public List<SchoolTerm> GetAllSchoolTerm() //获取学年学期的方法
         {
             return common.GetAllSchoolTerm();
@@ -44,6 +47,11 @@ namespace ManageBook.BLL
         public StudentClass GetAllCollegeInfo_Class(string ClassName)  //以班级名称获取学院信息和专业信息的方法
         {
             return common.GetAllCollegeInfo_Class(ClassName);
+        }
+
+        public List<GradeInfo> GetAllGradeInfo()//获取年级信息的方法
+        {
+            return common.GetAllGradeInfo();
         }
     }
 }

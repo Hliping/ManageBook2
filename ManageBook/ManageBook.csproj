@@ -109,6 +109,12 @@
     <Compile Include="FrmPlanBook.Designer.cs">
       <DependentUpon>FrmPlanBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudentInfo.designer.cs">
+      <DependentUpon>FrmStudentInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStudentInfoMoney.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPlanBook.resx">
       <DependentUpon>FrmPlanBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudentInfo.resx">
+      <DependentUpon>FrmStudentInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudentInfoMoney.resx">
       <DependentUpon>FrmStudentInfoMoney.cs</DependentUpon>

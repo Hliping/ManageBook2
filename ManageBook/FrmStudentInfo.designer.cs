@@ -434,6 +434,7 @@
             this.btnExcel.TabIndex = 5;
             this.btnExcel.Text = "批量添加Excel数据信息";
             this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // FrmStudentInfo
             // 

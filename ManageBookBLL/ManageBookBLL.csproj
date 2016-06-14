@@ -42,6 +42,7 @@
     <Compile Include="BLLBookStock.cs" />
     <Compile Include="BLLCommon.cs" />
     <Compile Include="BLLExamineBook.cs" />
+    <Compile Include="BLLExcel.cs" />
     <Compile Include="BLLGetBook.cs" />
     <Compile Include="BLLOrder.cs" />
     <Compile Include="BLLPlanBook.cs" />

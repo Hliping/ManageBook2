@@ -122,6 +122,26 @@ namespace ManageBook
             }
         }
 
+        private BLLExcel excel = new BLLExcel();
+        
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            open.Filter = "Excel文档|*.xlsx|03-07 excel文档|*.xls";
+            open.FilterIndex = 1;
+            open.RestoreDirectory = true;
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                string openFile = open.FileName;
+                DataSet ds= excel.ExcelToDataSet(openFile);
+                CommonStatic.dt = ds.Tables[0];
+                FrmExcel frm = new FrmExcel();
+                frm.Show();
+                frm.dgvExcel.DataSource = CommonStatic.dt;
+            }
+        }
+
 
         //private void cntxtmsDelete_Click(object sender, EventArgs e)
         //{

@@ -44,6 +44,7 @@
     <Compile Include="DALBookStock.cs" />
     <Compile Include="DALCommon.cs" />
     <Compile Include="DALExamineBook.cs" />
+    <Compile Include="DALExcel.cs" />
     <Compile Include="DALGetBook.cs" />
     <Compile Include="DALOrder.cs" />
     <Compile Include="DALPlanBook.cs" />

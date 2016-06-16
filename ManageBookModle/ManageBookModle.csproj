@@ -43,7 +43,9 @@
     <Compile Include="CollegeInfo.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="GetBook.cs" />
+    <Compile Include="GetBookBusiness.cs" />
     <Compile Include="GradeInfo.cs" />
+    <Compile Include="GrantBook.cs" />
     <Compile Include="MajorInfo.cs" />
     <Compile Include="ExamineBook.cs" />
     <Compile Include="PlanBook.cs" />

@@ -62,6 +62,7 @@
             this.btnRemark = new System.Windows.Forms.Button();
             this.btnAllExamine = new System.Windows.Forms.Button();
             this.btnAllNoExamine = new System.Windows.Forms.Button();
+            this.btnRemark1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,7 +79,7 @@
             this.dgvInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfo.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvInfo.Location = new System.Drawing.Point(-1, 124);
+            this.dgvInfo.Location = new System.Drawing.Point(12, 109);
             this.dgvInfo.Name = "dgvInfo";
             this.dgvInfo.ReadOnly = true;
             this.dgvInfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -316,7 +317,7 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(185, 641);
+            this.txtRemark.Location = new System.Drawing.Point(185, 640);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(401, 38);
@@ -326,7 +327,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(8, 648);
+            this.label3.Location = new System.Drawing.Point(8, 647);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 19);
             this.label3.TabIndex = 6;
@@ -346,7 +347,7 @@
             // btnAllExamine
             // 
             this.btnAllExamine.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAllExamine.Location = new System.Drawing.Point(682, 638);
+            this.btnAllExamine.Location = new System.Drawing.Point(1059, 642);
             this.btnAllExamine.Name = "btnAllExamine";
             this.btnAllExamine.Size = new System.Drawing.Size(132, 29);
             this.btnAllExamine.TabIndex = 9;
@@ -357,7 +358,7 @@
             // btnAllNoExamine
             // 
             this.btnAllNoExamine.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAllNoExamine.Location = new System.Drawing.Point(820, 638);
+            this.btnAllNoExamine.Location = new System.Drawing.Point(1197, 641);
             this.btnAllNoExamine.Name = "btnAllNoExamine";
             this.btnAllNoExamine.Size = new System.Drawing.Size(135, 29);
             this.btnAllNoExamine.TabIndex = 10;
@@ -365,11 +366,22 @@
             this.btnAllNoExamine.UseVisualStyleBackColor = true;
             this.btnAllNoExamine.Click += new System.EventHandler(this.btnAllNoExamine_Click);
             // 
+            // btnRemark1
+            // 
+            this.btnRemark1.Location = new System.Drawing.Point(611, 648);
+            this.btnRemark1.Name = "btnRemark1";
+            this.btnRemark1.Size = new System.Drawing.Size(75, 23);
+            this.btnRemark1.TabIndex = 11;
+            this.btnRemark1.Text = "添加备注";
+            this.btnRemark1.UseVisualStyleBackColor = true;
+            this.btnRemark1.Click += new System.EventHandler(this.btnRemark_Click);
+            // 
             // FrmExamine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1335, 699);
+            this.ClientSize = new System.Drawing.Size(1339, 679);
+            this.Controls.Add(this.btnRemark1);
             this.Controls.Add(this.btnRemark);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAllNoExamine);
@@ -431,5 +443,6 @@
         private System.Windows.Forms.ToolStripMenuItem cntxtNoExamine;
         private System.Windows.Forms.Button btnAllExamine;
         private System.Windows.Forms.Button btnAllNoExamine;
+        private System.Windows.Forms.Button btnRemark1;
     }
 }

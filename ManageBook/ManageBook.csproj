@@ -85,6 +85,12 @@
     <Compile Include="FrmExamineResult.Designer.cs">
       <DependentUpon>FrmExamineResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGrantBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGrantBook.Designer.cs">
+      <DependentUpon>FrmGrantBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmExamineResult.resx">
       <DependentUpon>FrmExamineResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGrantBook.resx">
+      <DependentUpon>FrmGrantBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

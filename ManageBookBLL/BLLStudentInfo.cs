@@ -21,12 +21,15 @@ namespace ManageBook.BLL
         {
             dalstudentInfo.InsertStudentInfo(studentInfo);
         }
+        public void DeleteStudentInfo(string studentNumber)
+        {
+            dalstudentInfo.DeleteStudentInfo(studentNumber);
+        }
 
-        //public void DeleteStudentInfo(string studentNumber)
-        //{
-        //    dalstudentInfo.DeleteStudentInfo(studentNumber);
-        //}
-
+        public void UpdateStudentInfo(StudentInfoBusiness studentInfo)
+        {
+            dalstudentInfo.UpdateStudentInfo(studentInfo);
+        }
         //public DataTable GetAllStudentInfo(int index, string info)
         //{
         //    dt = dalstudentInfo.GetAllStudentInfo(index, info).Tables[0];

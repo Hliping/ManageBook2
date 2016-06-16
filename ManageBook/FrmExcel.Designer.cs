@@ -62,10 +62,11 @@
             // lbltisi
             // 
             this.lbltisi.AutoSize = true;
+            this.lbltisi.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbltisi.ForeColor = System.Drawing.Color.Red;
-            this.lbltisi.Location = new System.Drawing.Point(527, 489);
+            this.lbltisi.Location = new System.Drawing.Point(515, 484);
             this.lbltisi.Name = "lbltisi";
-            this.lbltisi.Size = new System.Drawing.Size(0, 12);
+            this.lbltisi.Size = new System.Drawing.Size(0, 19);
             this.lbltisi.TabIndex = 2;
             // 
             // lblrecord

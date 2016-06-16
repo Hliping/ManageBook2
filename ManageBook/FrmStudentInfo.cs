@@ -17,6 +17,7 @@ namespace ManageBook
     {
         public FrmStudentInfo()
         {
+            
             InitializeComponent();
         }
         private BLLCommon bllCommon = new BLLCommon();
@@ -61,6 +62,7 @@ namespace ManageBook
         private void cmbMajor_SelectionChangeCommitted(object sender, EventArgs e)
         {
             majorInfoID = Convert.ToInt32(cmbMajor.SelectedValue);
+            //MessageBox.Show(majorInfoID.ToString());
             cmbGrade.Enabled = true;
             cmbGrade.Text = "——请选择年级——";
             cmbStudentClass.Enabled = false;
@@ -93,19 +95,62 @@ namespace ManageBook
 
         private void btnAppend_Click(object sender, EventArgs e)
         {
+            if (btnAppend.Text == "添加记录")
+            {
+                if (txtStudentName.Text.Trim() == "" || txtStudentNumber.Text.Trim() == "") { lbl.Text = "请完整信息的填写"; }
+                else
+                {
+                    bllStudentInfo.InsertStudentInfo(text());
+                    dgvQuery.DataSource = bllStudentInfo.GetAllStudentInfo(null, null);
+                    txtStudentName.Text = string.Empty;
+                    txtStudentNumber.Text = string.Empty;
+                    txtStudentMarket.Text = string.Empty;
+                    rbtnMan.Checked = true;
+                    lbl.Text = "";
+                }
+            }
+            else
+            {
+                
+               // MessageBox.Show(text().StudentInfoID.ToString());
+               bllStudentInfo.UpdateStudentInfo(text());
+               dgvQuery.DataSource = bllStudentInfo.GetAllStudentInfo(null, null);
+                btnAppend.Text = "添加记录";
+                CmbData();
+                cmbGrade.Text = "——请选择年级——";
+                cmbStudentClass.Text = "——请选择班级——";
+                cmbMajor.Text = "——请选择专业——";
+                cmbCollege.Text = "——请选择学院——";
+                txtStudentName.Text = string.Empty;
+                txtStudentNumber.Text = string.Empty;
+                txtStudentMarket.Text = string.Empty;
+                rbtnMan.Checked = true;
+                lbl.Text = "";
+                cmbGrade.Enabled = false;
+                cmbMajor.Enabled = false;
+                cmbStudentClass.Enabled = false;
+                btnAppend.Enabled = false;
+            }
+        
+        }
+        public StudentInfoBusiness text()
+        {
             StudentInfoBusiness studentinfo = new StudentInfoBusiness();
-            studentinfo.StudentClassID=Convert.ToInt32(cmbStudentClass.SelectedValue);
-            studentinfo.StudentName = txtStudentName.Text;
-            studentinfo.StudentNumber = txtStudentNumber.Text;
+            studentinfo.StudentClassID = Convert.ToInt32(cmbStudentClass.SelectedValue);
+            studentinfo.StudentName = txtStudentName.Text.Trim();
+            studentinfo.StudentNumber = txtStudentNumber.Text.Trim();
             studentinfo.StudentSex = "男";
             if (rbtnWoman.Checked) studentinfo.StudentSex = "女";
-            studentinfo.StudentMarket = txtStudentMarket.Text;
-            bllStudentInfo.InsertStudentInfo(studentinfo);
-            dgvQuery.DataSource = bllStudentInfo.GetAllStudentInfo(null,null);
-            txtStudentName.Text = string.Empty;
-            txtStudentNumber.Text = string.Empty;
-            txtStudentMarket.Text = string.Empty;
-            rbtnMan.Checked = true;
+            studentinfo.StudentMarket = txtStudentMarket.Text.Trim();
+            try
+            {
+                studentinfo.StudentInfoID = Convert.ToInt32(dgvQuery.CurrentRow.Cells["学生信息编号"].Value);
+            }
+            catch (Exception)
+            {
+                //throw;
+            }
+            return studentinfo;
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
@@ -144,15 +189,30 @@ namespace ManageBook
             }
         }
 
+        private void cntxtmsDelete_Click(object sender, EventArgs e)
+        {
+            string studentNumber = dgvQuery.CurrentRow.Cells["学生信息编号"].Value.ToString();
+            bllStudentInfo.DeleteStudentInfo(studentNumber);
+            dgvQuery.DataSource = bllStudentInfo.GetAllStudentInfo(null, null);
+        }
 
-        //private void cntxtmsDelete_Click(object sender, EventArgs e)
-        //{
-        //    string studentNumber = dgvQuery.CurrentRow.Cells[1].Value.ToString();
-        //    bllStudentInfo.DeleteStudentInfo(studentNumber);
-        //    dgvQueryInfo();
-        //}
-
-
+        private void cntxtmsUpdate_Click(object sender, EventArgs e)
+        {
+            btnAppend.Text = "确认修改";
+            txtStudentName.Text = dgvQuery.CurrentRow.Cells["姓名"].Value.ToString();
+            txtStudentNumber.Text = dgvQuery.CurrentRow.Cells["学号"].Value.ToString();
+            txtStudentMarket.Text = dgvQuery.CurrentRow.Cells["备注"].Value.ToString();
+            if (dgvQuery.CurrentRow.Cells["性别"].Value.ToString() == "男") { rbtnMan.Checked = true; } else { rbtnWoman.Checked = true; }
+            CmbData();
+            cmbGrade.Enabled = false;
+            cmbMajor.Enabled = false;
+            cmbStudentClass.Enabled = false;
+            btnAppend.Enabled = false;
+        }
+        private void cmbStudentClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(cmbStudentClass.SelectedValue) > 0) { btnAppend.Enabled = true; }
+        }
     }
 
 }

@@ -95,7 +95,7 @@ namespace ManageBook
                     GetBook gb = new GetBook();
                     gb.GetBookNum = int.Parse(txtNum.Text);
                     gb.ISBN = txtISBN.Text;
-                    gb.Signer = txtNum.Text;
+                    gb.Signer =txtSigner.Text;
                     gb.SignerPhone = txtSignerPhone.Text;
                     gb.SignerIdentity = cmbIdentity.Text;
 

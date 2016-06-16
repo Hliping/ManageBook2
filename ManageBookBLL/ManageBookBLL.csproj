@@ -44,6 +44,8 @@
     <Compile Include="BLLExamineBook.cs" />
     <Compile Include="BLLExcel.cs" />
     <Compile Include="BLLGetBook.cs" />
+    <Compile Include="BLLGetBookBusiness.cs" />
+    <Compile Include="BLLGrantBook.cs" />
     <Compile Include="BLLOrder.cs" />
     <Compile Include="BLLPlanBook.cs" />
     <Compile Include="BLLStudentInfo.cs" />

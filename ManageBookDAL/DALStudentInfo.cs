@@ -54,7 +54,6 @@ namespace ManageBook.DAL
                     studentinfo.MajorSimple = sdr["MajorSimple"].ToString();
                     studentinfo.StudentClassID = Convert.ToInt32(sdr["StudentClassID"]);
                     studentinfo.StudentInfoID = Convert.ToInt32(sdr["StudentInfoID"]);
-
                     list.Add(studentinfo);
                 }
             }
@@ -70,6 +69,25 @@ namespace ManageBook.DAL
                                          new SqlParameter("@StudentSex",studentInfo.StudentSex),
                                          new SqlParameter("@StudentMarket",studentInfo.StudentMarket)};
             DBHelpers.UpdateInfo(sql, parameter);
+        }
+
+        public void DeleteStudentInfo(string studentNumber)
+        {
+            string sql = string.Format("delete from StudentInfo where StudentInfoID = {0}",studentNumber);
+            DBHelpers.DeleteInfo(sql);
+        }
+
+        public void UpdateStudentInfo(StudentInfoBusiness studentInfo)
+        {
+            string sql = string.Format("update studentInfo set StudentClassID=@StudentClassID,StudentName=@StudentName,StudentNumber=@StudentNumber,StudentSex=@StudentSex,StudentMarket=@StudentMarket where StudentInfoID=@StudentInfoID");
+            SqlParameter[] parameter = { new SqlParameter("@StudentClassID",studentInfo.StudentClassID),
+                                         new SqlParameter("@StudentName",studentInfo.StudentName),
+                                         new SqlParameter("@StudentNumber",studentInfo.StudentNumber),
+                                         new SqlParameter("@StudentSex",studentInfo.StudentSex),
+                                         new SqlParameter("@StudentMarket",studentInfo.StudentMarket),
+                                         new SqlParameter("@StudentInfoID",studentInfo.StudentInfoID)
+                                        };
+            DBHelpers.UpdateInfo(sql,parameter);
         }
     }
 }

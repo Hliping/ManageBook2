@@ -11,6 +11,7 @@ namespace ManageBook.DAL
 {
     public class DALGetBook
     {
+       
         public void UpdateGetBook(GetBook gb) 
         {
             SqlTransaction sqltran;

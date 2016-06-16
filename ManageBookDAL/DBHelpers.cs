@@ -30,6 +30,7 @@ namespace ManageBook.DAL
             scm.Parameters.AddRange(parameter);
             SqlDataReader sdr = scm.ExecuteReader();
             return sdr;
+            
         }
         public static void UpdateInfo(string sql, params SqlParameter[] parameter) 
         {
@@ -55,6 +56,21 @@ namespace ManageBook.DAL
                 conn.Open();
                 SqlCommand scm = new SqlCommand(sql, conn);
                 scm.Parameters.Add(parameter);
+                scm.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
+        public static void DeleteInfo(string sql)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(DBHelpers.Connection);
+                conn.Open();
+                SqlCommand scm = new SqlCommand(sql, conn);
                 scm.ExecuteNonQuery();
             }
             catch (Exception)

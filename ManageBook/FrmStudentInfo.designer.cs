@@ -30,6 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvQuery = new System.Windows.Forms.DataGridView();
+            this.学生信息编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.班别编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.学院名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.专业名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.年级 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.班别 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.性别 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.学号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.备注 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cntxtms = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cntxtmsDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.cntxtmsUpdate = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,6 +48,7 @@
             this.btnQuery = new System.Windows.Forms.Button();
             this.txtCondition = new System.Windows.Forms.TextBox();
             this.grpStudentInfo = new System.Windows.Forms.GroupBox();
+            this.lbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtStudentMarket = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,16 +64,6 @@
             this.txtStudentName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuery)).BeginInit();
             this.cntxtms.SuspendLayout();
@@ -77,16 +78,16 @@
             this.dgvQuery.AllowUserToDeleteRows = false;
             this.dgvQuery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuery.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column9,
-            this.Column10,
-            this.Column8});
+            this.学生信息编号,
+            this.班别编号,
+            this.学院名称,
+            this.专业名称,
+            this.年级,
+            this.班别,
+            this.姓名,
+            this.性别,
+            this.学号,
+            this.备注});
             this.dgvQuery.ContextMenuStrip = this.cntxtms;
             this.dgvQuery.Location = new System.Drawing.Point(351, 94);
             this.dgvQuery.Name = "dgvQuery";
@@ -95,6 +96,83 @@
             this.dgvQuery.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQuery.Size = new System.Drawing.Size(976, 572);
             this.dgvQuery.TabIndex = 0;
+            // 
+            // 学生信息编号
+            // 
+            this.学生信息编号.DataPropertyName = "StudentInfoId";
+            this.学生信息编号.HeaderText = "学生信息编号";
+            this.学生信息编号.Name = "学生信息编号";
+            this.学生信息编号.ReadOnly = true;
+            this.学生信息编号.Visible = false;
+            // 
+            // 班别编号
+            // 
+            this.班别编号.DataPropertyName = "StudentClassId";
+            this.班别编号.HeaderText = "班别编号";
+            this.班别编号.Name = "班别编号";
+            this.班别编号.ReadOnly = true;
+            this.班别编号.Visible = false;
+            // 
+            // 学院名称
+            // 
+            this.学院名称.DataPropertyName = "CollegeName";
+            this.学院名称.HeaderText = "学院名称";
+            this.学院名称.Name = "学院名称";
+            this.学院名称.ReadOnly = true;
+            this.学院名称.Width = 120;
+            // 
+            // 专业名称
+            // 
+            this.专业名称.DataPropertyName = "MajorSimple";
+            this.专业名称.HeaderText = "专业名称";
+            this.专业名称.Name = "专业名称";
+            this.专业名称.ReadOnly = true;
+            // 
+            // 年级
+            // 
+            this.年级.DataPropertyName = "GradeName";
+            this.年级.HeaderText = "年级";
+            this.年级.Name = "年级";
+            this.年级.ReadOnly = true;
+            // 
+            // 班别
+            // 
+            this.班别.DataPropertyName = "ClassName";
+            this.班别.HeaderText = "班别";
+            this.班别.Name = "班别";
+            this.班别.ReadOnly = true;
+            this.班别.Width = 120;
+            // 
+            // 姓名
+            // 
+            this.姓名.DataPropertyName = "StudentName";
+            this.姓名.HeaderText = "姓名";
+            this.姓名.Name = "姓名";
+            this.姓名.ReadOnly = true;
+            this.姓名.Width = 113;
+            // 
+            // 性别
+            // 
+            this.性别.DataPropertyName = "StudentSex";
+            this.性别.HeaderText = "性别";
+            this.性别.Name = "性别";
+            this.性别.ReadOnly = true;
+            // 
+            // 学号
+            // 
+            this.学号.DataPropertyName = "StudentNumber";
+            this.学号.HeaderText = "学号";
+            this.学号.Name = "学号";
+            this.学号.ReadOnly = true;
+            this.学号.Width = 130;
+            // 
+            // 备注
+            // 
+            this.备注.DataPropertyName = "StudentMarket";
+            this.备注.HeaderText = "备注";
+            this.备注.Name = "备注";
+            this.备注.ReadOnly = true;
+            this.备注.Width = 150;
             // 
             // cntxtms
             // 
@@ -109,12 +187,14 @@
             this.cntxtmsDelete.Name = "cntxtmsDelete";
             this.cntxtmsDelete.Size = new System.Drawing.Size(148, 22);
             this.cntxtmsDelete.Text = "删除学生信息";
+            this.cntxtmsDelete.Click += new System.EventHandler(this.cntxtmsDelete_Click);
             // 
             // cntxtmsUpdate
             // 
             this.cntxtmsUpdate.Name = "cntxtmsUpdate";
             this.cntxtmsUpdate.Size = new System.Drawing.Size(148, 22);
             this.cntxtmsUpdate.Text = "修改学生信息";
+            this.cntxtmsUpdate.Click += new System.EventHandler(this.cntxtmsUpdate_Click);
             // 
             // grpCondition
             // 
@@ -171,6 +251,7 @@
             // 
             // grpStudentInfo
             // 
+            this.grpStudentInfo.Controls.Add(this.lbl);
             this.grpStudentInfo.Controls.Add(this.label5);
             this.grpStudentInfo.Controls.Add(this.txtStudentMarket);
             this.grpStudentInfo.Controls.Add(this.label4);
@@ -189,6 +270,16 @@
             this.grpStudentInfo.TabIndex = 4;
             this.grpStudentInfo.TabStop = false;
             this.grpStudentInfo.Text = "学生信息添加";
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl.ForeColor = System.Drawing.Color.Red;
+            this.lbl.Location = new System.Drawing.Point(168, 544);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(0, 12);
+            this.lbl.TabIndex = 23;
             // 
             // label5
             // 
@@ -289,6 +380,7 @@
             this.cmbStudentClass.Size = new System.Drawing.Size(233, 27);
             this.cmbStudentClass.TabIndex = 7;
             this.cmbStudentClass.Text = "——请选择班别——";
+            this.cmbStudentClass.SelectedIndexChanged += new System.EventHandler(this.cmbStudentClass_SelectedIndexChanged);
             // 
             // cmbGrade
             // 
@@ -305,12 +397,13 @@
             // 
             // btnAppend
             // 
+            this.btnAppend.Enabled = false;
             this.btnAppend.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAppend.Location = new System.Drawing.Point(107, 534);
+            this.btnAppend.Location = new System.Drawing.Point(81, 534);
             this.btnAppend.Name = "btnAppend";
             this.btnAppend.Size = new System.Drawing.Size(78, 32);
             this.btnAppend.TabIndex = 13;
-            this.btnAppend.Text = "添加信息";
+            this.btnAppend.Text = "添加记录";
             this.btnAppend.UseVisualStyleBackColor = true;
             this.btnAppend.Click += new System.EventHandler(this.btnAppend_Click);
             // 
@@ -347,83 +440,6 @@
             this.label2.Size = new System.Drawing.Size(104, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "学生姓名：";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "CollegeName";
-            this.Column1.HeaderText = "学院名称";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 120;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "MajorSimple";
-            this.Column2.HeaderText = "专业名称";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "GradeName";
-            this.Column3.HeaderText = "年级";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "ClassName";
-            this.Column4.HeaderText = "班别";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 120;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "StudentName";
-            this.Column5.HeaderText = "姓名";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 113;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "StudentSex";
-            this.Column6.HeaderText = "性别";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "StudentNumber";
-            this.Column7.HeaderText = "学号";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 130;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "StudentInfoId";
-            this.Column9.HeaderText = "学生信息编号";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Visible = false;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "StudentClassId";
-            this.Column10.HeaderText = "班别编号";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Visible = false;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "StudentMarket";
-            this.Column8.HeaderText = "备注";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 150;
             // 
             // btnExcel
             // 
@@ -486,16 +502,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton rbtnWoman;
         private System.Windows.Forms.RadioButton rbtnMan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 学生信息编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 班别编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 学院名称;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 专业名称;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 年级;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 班别;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 姓名;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 性别;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 学号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 备注;
+        private System.Windows.Forms.Label lbl;
     }
 }

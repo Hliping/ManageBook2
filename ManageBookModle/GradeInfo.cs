@@ -10,8 +10,8 @@ namespace ManageBook.Modle
         /// <summary>
         /// 年级信息的实体类
         /// </summary>
-        public int GradeInfoID { get; set; }
-        public string GradeName { get; set; }
-        public string GradeSimple { get; set; }
+        public int GradeInfoID { get; set; } //年级编号
+        public string GradeName { get; set; } //年级全称
+        public string GradeSimple { get; set; }//年级简称
     }
 }

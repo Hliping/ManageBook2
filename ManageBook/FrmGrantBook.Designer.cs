@@ -28,7 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvGetBook = new System.Windows.Forms.DataGridView();
+            this.dgvBookStock = new System.Windows.Forms.DataGridView();
+            this.dgvGrantBook = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvStudentInfo = new System.Windows.Forms.DataGridView();
+            this.cmbCollege = new System.Windows.Forms.ComboBox();
+            this.cmbStudentClass = new System.Windows.Forms.ComboBox();
+            this.选择 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.学院名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.专业名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.班别名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.学生姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.学号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.性别 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.备注 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.学生信息编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,15 +52,55 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGetBook)).BeginInit();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrantBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentInfo)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvGetBook
+            // dgvBookStock
             // 
-            this.dgvGetBook.AllowUserToAddRows = false;
-            this.dgvGetBook.AllowUserToDeleteRows = false;
-            this.dgvGetBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGetBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvBookStock.AllowUserToAddRows = false;
+            this.dgvBookStock.AllowUserToDeleteRows = false;
+            this.dgvBookStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBookStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
+            this.Column20,
+            this.Column21,
+            this.Column22,
+            this.Column23});
+            this.dgvBookStock.Location = new System.Drawing.Point(0, 37);
+            this.dgvBookStock.Name = "dgvBookStock";
+            this.dgvBookStock.ReadOnly = true;
+            this.dgvBookStock.RowTemplate.Height = 23;
+            this.dgvBookStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBookStock.Size = new System.Drawing.Size(650, 250);
+            this.dgvBookStock.TabIndex = 0;
+            // 
+            // dgvGrantBook
+            // 
+            this.dgvGrantBook.AllowUserToAddRows = false;
+            this.dgvGrantBook.AllowUserToDeleteRows = false;
+            this.dgvGrantBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrantBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -53,88 +108,364 @@
             this.Column5,
             this.Column6,
             this.Column7,
-            this.Column8});
-            this.dgvGetBook.Location = new System.Drawing.Point(12, 12);
-            this.dgvGetBook.Name = "dgvGetBook";
-            this.dgvGetBook.ReadOnly = true;
-            this.dgvGetBook.RowTemplate.Height = 23;
-            this.dgvGetBook.Size = new System.Drawing.Size(904, 330);
-            this.dgvGetBook.TabIndex = 0;
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14});
+            this.dgvGrantBook.Location = new System.Drawing.Point(0, 318);
+            this.dgvGrantBook.Name = "dgvGrantBook";
+            this.dgvGrantBook.ReadOnly = true;
+            this.dgvGrantBook.RowTemplate.Height = 23;
+            this.dgvGrantBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvGrantBook.Size = new System.Drawing.Size(1341, 361);
+            this.dgvGrantBook.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(592, 296);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 19);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "教材库存发放明细";
+            // 
+            // dgvStudentInfo
+            // 
+            this.dgvStudentInfo.AllowUserToAddRows = false;
+            this.dgvStudentInfo.AllowUserToDeleteRows = false;
+            this.dgvStudentInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudentInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.选择,
+            this.学院名称,
+            this.专业名称,
+            this.班别名称,
+            this.学生姓名,
+            this.学号,
+            this.性别,
+            this.备注,
+            this.学生信息编号});
+            this.dgvStudentInfo.Location = new System.Drawing.Point(690, 40);
+            this.dgvStudentInfo.Name = "dgvStudentInfo";
+            this.dgvStudentInfo.ReadOnly = true;
+            this.dgvStudentInfo.RowTemplate.Height = 23;
+            this.dgvStudentInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStudentInfo.Size = new System.Drawing.Size(650, 250);
+            this.dgvStudentInfo.TabIndex = 4;
+            this.dgvStudentInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentInfo_CellContentClick);
+            // 
+            // cmbCollege
+            // 
+            this.cmbCollege.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCollege.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbCollege.FormattingEnabled = true;
+            this.cmbCollege.Location = new System.Drawing.Point(12, 4);
+            this.cmbCollege.Name = "cmbCollege";
+            this.cmbCollege.Size = new System.Drawing.Size(233, 27);
+            this.cmbCollege.TabIndex = 8;
+            this.cmbCollege.Text = "——请选择学院——";
+            this.cmbCollege.SelectionChangeCommitted += new System.EventHandler(this.cmbCollege_SelectionChangeCommitted);
+            // 
+            // cmbStudentClass
+            // 
+            this.cmbStudentClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbStudentClass.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbStudentClass.FormattingEnabled = true;
+            this.cmbStudentClass.Location = new System.Drawing.Point(285, 3);
+            this.cmbStudentClass.Name = "cmbStudentClass";
+            this.cmbStudentClass.Size = new System.Drawing.Size(233, 27);
+            this.cmbStudentClass.TabIndex = 11;
+            this.cmbStudentClass.Text = "——请选择班级——";
+            this.cmbStudentClass.SelectionChangeCommitted += new System.EventHandler(this.cmbStudentClass_SelectionChangeCommitted);
+            // 
+            // 选择
+            // 
+            this.选择.HeaderText = "选择";
+            this.选择.Name = "选择";
+            this.选择.ReadOnly = true;
+            this.选择.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.选择.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.选择.Width = 55;
+            // 
+            // 学院名称
+            // 
+            this.学院名称.DataPropertyName = "CollegeName";
+            this.学院名称.HeaderText = "学院名称";
+            this.学院名称.Name = "学院名称";
+            this.学院名称.ReadOnly = true;
+            // 
+            // 专业名称
+            // 
+            this.专业名称.DataPropertyName = "MajorSimple";
+            this.专业名称.HeaderText = "专业名称";
+            this.专业名称.Name = "专业名称";
+            this.专业名称.ReadOnly = true;
+            // 
+            // 班别名称
+            // 
+            this.班别名称.DataPropertyName = "ClassName";
+            this.班别名称.HeaderText = "班别名称";
+            this.班别名称.Name = "班别名称";
+            this.班别名称.ReadOnly = true;
+            // 
+            // 学生姓名
+            // 
+            this.学生姓名.DataPropertyName = "StudentName";
+            this.学生姓名.HeaderText = "学生姓名";
+            this.学生姓名.Name = "学生姓名";
+            this.学生姓名.ReadOnly = true;
+            // 
+            // 学号
+            // 
+            this.学号.DataPropertyName = "StudentNumber";
+            this.学号.HeaderText = "学号";
+            this.学号.Name = "学号";
+            this.学号.ReadOnly = true;
+            // 
+            // 性别
+            // 
+            this.性别.DataPropertyName = "StudentSex";
+            this.性别.HeaderText = "性别";
+            this.性别.Name = "性别";
+            this.性别.ReadOnly = true;
+            // 
+            // 备注
+            // 
+            this.备注.DataPropertyName = "StudentMarket";
+            this.备注.HeaderText = "备注";
+            this.备注.Name = "备注";
+            this.备注.ReadOnly = true;
+            // 
+            // 学生信息编号
+            // 
+            this.学生信息编号.DataPropertyName = "StudentInfoID";
+            this.学生信息编号.HeaderText = "学生信息编号";
+            this.学生信息编号.Name = "学生信息编号";
+            this.学生信息编号.ReadOnly = true;
+            this.学生信息编号.Visible = false;
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSelect.Location = new System.Drawing.Point(690, 12);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(83, 27);
+            this.btnSelect.TabIndex = 12;
+            this.btnSelect.Text = "全选/取消";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "ClassName";
-            this.Column1.HeaderText = "教材名称";
+            this.Column1.DataPropertyName = "CollegeName";
+            this.Column1.HeaderText = "学院名称";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "Author";
-            this.Column2.HeaderText = "作者";
+            this.Column2.DataPropertyName = "MajorSimple";
+            this.Column2.HeaderText = "专业名称";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 80;
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "Publish";
-            this.Column3.HeaderText = "出版社";
+            this.Column3.DataPropertyName = "GradeSimple";
+            this.Column3.HeaderText = "年级名称";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 82;
             // 
             // Column4
             // 
-            this.Column4.DataPropertyName = "ISBN";
-            this.Column4.HeaderText = "ISBN码";
+            this.Column4.DataPropertyName = "TermName";
+            this.Column4.HeaderText = "学年学期";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 80;
             // 
             // Column5
             // 
-            this.Column5.DataPropertyName = "CourseType";
-            this.Column5.HeaderText = "教材性质";
+            this.Column5.DataPropertyName = "StudentName";
+            this.Column5.HeaderText = "学生姓名";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
-            this.Column6.DataPropertyName = "ClassName";
-            this.Column6.HeaderText = "签领班级";
+            this.Column6.DataPropertyName = "StudentNumber";
+            this.Column6.HeaderText = "学生学号";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
-            this.Column7.DataPropertyName = "Signer";
-            this.Column7.HeaderText = "签领人";
+            this.Column7.DataPropertyName = "StudentSex";
+            this.Column7.HeaderText = "性别";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 55;
             // 
             // Column8
             // 
-            this.Column8.DataPropertyName = "GetBookNum";
-            this.Column8.HeaderText = "签领数量";
+            this.Column8.DataPropertyName = "CourseName";
+            this.Column8.HeaderText = "课程名称";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "CourseType";
+            this.Column9.HeaderText = "课程类型";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "BookName";
+            this.Column10.HeaderText = "教材名称";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "Author";
+            this.Column11.HeaderText = "作者";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "Publish";
+            this.Column12.HeaderText = "出版社";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "ISBN";
+            this.Column13.HeaderText = "ISBN码";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "GetBookNum";
+            this.Column14.HeaderText = "获书数量";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "ClassName";
+            this.Column15.HeaderText = "班别";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "TermSimple";
+            this.Column16.HeaderText = "学年学期";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "CourseType";
+            this.Column17.HeaderText = "课程类型";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.DataPropertyName = "CourseName";
+            this.Column18.HeaderText = "课程名称";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
+            // Column19
+            // 
+            this.Column19.DataPropertyName = "BookName";
+            this.Column19.HeaderText = "教材名称";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            // 
+            // Column20
+            // 
+            this.Column20.DataPropertyName = "Author";
+            this.Column20.HeaderText = "作者";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            // 
+            // Column21
+            // 
+            this.Column21.DataPropertyName = "Publish";
+            this.Column21.HeaderText = "出版社";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            // 
+            // Column22
+            // 
+            this.Column22.DataPropertyName = "ISBN";
+            this.Column22.HeaderText = "ISBN码";
+            this.Column22.Name = "Column22";
+            this.Column22.ReadOnly = true;
+            // 
+            // Column23
+            // 
+            this.Column23.DataPropertyName = "BookTotalNum";
+            this.Column23.HeaderText = "预定数量";
+            this.Column23.Name = "Column23";
+            this.Column23.ReadOnly = true;
             // 
             // FrmGrantBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1339, 678);
-            this.Controls.Add(this.dgvGetBook);
+            this.Controls.Add(this.btnSelect);
+            this.Controls.Add(this.cmbCollege);
+            this.Controls.Add(this.cmbStudentClass);
+            this.Controls.Add(this.dgvStudentInfo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvGrantBook);
+            this.Controls.Add(this.dgvBookStock);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGrantBook";
             this.Text = "FrmGrantBook";
             this.Load += new System.EventHandler(this.FrmGrantBook_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGetBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrantBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentInfo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvGetBook;
+        private System.Windows.Forms.DataGridView dgvBookStock;
+        private System.Windows.Forms.DataGridView dgvGrantBook;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvStudentInfo;
+        private System.Windows.Forms.ComboBox cmbCollege;
+        private System.Windows.Forms.ComboBox cmbStudentClass;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn 选择;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 学院名称;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 专业名称;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 班别名称;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 学生姓名;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 学号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 性别;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 备注;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 学生信息编号;
+        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -143,5 +474,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
     }
 }

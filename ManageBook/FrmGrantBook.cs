@@ -44,7 +44,7 @@ namespace ManageBook
         public void dgvStudentAllInfo()
         {
             dgvStudentInfo.AutoGenerateColumns = false;
-            dgvStudentInfo.DataSource = bllbookbusiness.GetAllStudentInfo();
+            dgvStudentInfo.DataSource = bllbookbusiness.GetAllStudentInfo(0,0);
         }
         /// <summary>
         /// 绑定教材发放明细列表数据的方法
@@ -52,7 +52,7 @@ namespace ManageBook
         public void dgvGrantBookAllInfo()
         {
             dgvGrantBook.AutoGenerateColumns = false;
-            dgvGrantBook.DataSource = bllbookbusiness.GetAllGrantBookInfo();
+            dgvGrantBook.DataSource = bllbookbusiness.GetAllGrantBookInfo(0,0);
         }
         /// <summary>
         /// 绑定下拉列表学院的数据方法
@@ -85,6 +85,8 @@ namespace ManageBook
             {
                 //MessageBox.Show(n.ToString());
                 dgvBookStock.DataSource= bllbookbusiness.GetAllBookStock(1, collegeID);
+                dgvStudentInfo.DataSource = bllbookbusiness.GetAllStudentInfo(1, collegeID);
+                dgvGrantBook.DataSource = bllbookbusiness.GetAllGrantBookInfo(1, collegeID);
             }
             //cmbStudentClass.DataSource = common.GetAllStudentClass(collegeID);
             //cmbStudentClass.ValueMember = "StudentClassID";
@@ -102,11 +104,15 @@ namespace ManageBook
             if (ClassInfoID == 0)
             {
                 dgvBookStock.DataSource = bllbookbusiness.GetAllBookStock(1, collegeID);
+                dgvStudentInfo.DataSource = bllbookbusiness.GetAllStudentInfo(1, collegeID);
+                dgvGrantBook.DataSource = bllbookbusiness.GetAllGrantBookInfo(1, collegeID);
             }
             else
             {
                 //MessageBox.Show(n.ToString());
                 dgvBookStock.DataSource = bllbookbusiness.GetAllBookStock(2, ClassInfoID);
+                dgvStudentInfo.DataSource = bllbookbusiness.GetAllStudentInfo(2, ClassInfoID);
+                dgvGrantBook.DataSource = bllbookbusiness.GetAllGrantBookInfo(2, ClassInfoID);
             }
         }
         private void cmbstudentclass(int collegeID)

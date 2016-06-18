@@ -16,17 +16,17 @@ namespace ManageBook.BLL
         {
             return getbookbusiness.GetAllGetBook();
         }
-        public List<BookStockBusiness> GetAllBookStock(int m,int n)
+        public List<BookStockBusiness> GetAllBookStock(int TypeID, int ID)
         {
-            return getbookbusiness.GetAllBookStock(m,n);
+            return getbookbusiness.GetAllBookStock(TypeID,ID);
         }
-        public List<StudentInfoBusiness> GetAllStudentInfo()
+        public List<StudentInfoBusiness> GetAllStudentInfo(int TypeID, int ID)
         {
-            return getbookbusiness.GetAllStudentInfo();
+            return getbookbusiness.GetAllStudentInfo(TypeID, ID);
         }
-        public List<GrantBookBusiness> GetAllGrantBookInfo()
+        public List<GrantBookBusiness> GetAllGrantBookInfo(int TypeID, int ID)
         {
-            return getbookbusiness.GetAllGrantBookInfo();
+            return getbookbusiness.GetAllGrantBookInfo(TypeID, ID);
         }
     }
 }

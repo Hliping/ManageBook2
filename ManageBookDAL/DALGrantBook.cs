@@ -34,19 +34,24 @@ namespace ManageBook.DAL
             }
             return list;
         }
-        public List<BookStockBusiness> GetAllBookStock(int m,int n)
+        /// <summary>
+        /// 获取库存信息的方法
+        /// </summary>
+        /// <param name="TypeID">可以选择sql语句的调用</param>
+        /// <param name="ID">ID可以表示学院信息ID   也可以表示班级信息ID</param>
+        /// <returns></returns>
+        public List<BookStockBusiness> GetAllBookStock(int TypeID, int ID)
         {
             List<BookStockBusiness> list = new List<BookStockBusiness>();
             StringBuilder sql = new StringBuilder("SELECT StudentClass.ClassName, SchoolTerm.TermSimple, Course.CourseType,PlanBook.CourseName, PlanBook.BookName, PlanBook.ISBN as 'ISBN', PlanBook.Author, PlanBook.Publish,PlanBook.BookTotalNum FROM  BookStock INNER JOIN PlanBook ON BookStock.PlanBookID = PlanBook.PlanBookID INNER JOIN SchoolTerm ON PlanBook.SchoolTermID = SchoolTerm.SchoolTermID INNER JOIN StudentClass ON PlanBook.StudentClassID = StudentClass.StudentClassID INNER JOIN CollegeInfo on CollegeInfo.CollegeID=StudentClass.CollegeID INNER JOIN Course ON PlanBook.CourseID = Course.CourseID where 1=1");
-          
-            if (n == 0) { sql.ToString(); }
-            if (m == 1)
+            if (TypeID == 0) { sql.ToString(); }
+            if (TypeID == 1)
             {
-                sql.Append(string.Format(" and CollegeInfo.CollegeID ={0}",n));
+                sql.Append(string.Format(" and CollegeInfo.CollegeID ={0}", ID));
             }
-            if (m == 2)
+            if (TypeID == 2)
             {
-                sql.Append(string.Format(" and StudentClass.StudentClassID ={0}", n));
+                sql.Append(string.Format(" and StudentClass.StudentClassID ={0}", ID));
             }
             using (SqlDataReader sdr = DBHelpers.GetAllInfo(sql.ToString()))
             {
@@ -67,12 +72,26 @@ namespace ManageBook.DAL
             }
              return list;
         }
-
-        public List<StudentInfoBusiness> GetAllStudentInfo()
+        /// <summary>
+        /// 获取学生信息的方法
+        /// </summary>
+        /// <param name="TypeID">可以选择sql语句的调用</param>
+        /// <param name="ID">ID可以表示学院信息ID   也可以表示班级信息ID</param>
+        /// <returns></returns>
+        public List<StudentInfoBusiness> GetAllStudentInfo(int TypeID, int ID)
         {
             List<StudentInfoBusiness> list = new List<StudentInfoBusiness>();
-            string sql = "SELECT  StudentInfo.StudentInfoID,StudentInfo.StudentMarket, StudentClass.ClassName, StudentInfo.StudentName, StudentInfo.StudentNumber, StudentInfo.StudentSex, CollegeInfo.CollegeName, GradeInfo.GradeName, MajorInfo.MajorSimple FROM StudentInfo INNER JOIN StudentClass ON StudentInfo.StudentClassID = StudentClass.StudentClassID INNER JOIN  CollegeInfo ON StudentClass.CollegeID = CollegeInfo.CollegeID INNER JOIN  MajorInfo ON StudentClass.MajorInfoID = MajorInfo.MajorInfoID INNER JOIN GradeInfo ON StudentClass.GradeInfoID = GradeInfo.GradeInfoID";
-            using (SqlDataReader sdr = DBHelpers.GetAllInfo(sql))
+            StringBuilder sql = new StringBuilder("SELECT  StudentInfo.StudentInfoID,StudentInfo.StudentMarket, StudentClass.ClassName, StudentInfo.StudentName, StudentInfo.StudentNumber, StudentInfo.StudentSex, CollegeInfo.CollegeName, GradeInfo.GradeName, MajorInfo.MajorSimple FROM StudentInfo INNER JOIN StudentClass ON StudentInfo.StudentClassID = StudentClass.StudentClassID INNER JOIN  CollegeInfo ON StudentClass.CollegeID = CollegeInfo.CollegeID INNER JOIN  MajorInfo ON StudentClass.MajorInfoID = MajorInfo.MajorInfoID INNER JOIN GradeInfo ON StudentClass.GradeInfoID = GradeInfo.GradeInfoID where 1=1 ");
+            if (TypeID == 0) { sql.ToString(); }
+            if (TypeID == 1)
+            {
+                sql.Append(string.Format(" and CollegeInfo.CollegeID ={0}", ID));
+            }
+            if (TypeID == 2)
+            {
+                sql.Append(string.Format(" and StudentClass.StudentClassID ={0}", ID));
+            }
+            using (SqlDataReader sdr = DBHelpers.GetAllInfo(sql.ToString()))
             {
                 while (sdr.Read())
                 {
@@ -92,18 +111,33 @@ namespace ManageBook.DAL
             }
             return list;
         }
-        public List<GrantBookBusiness> GetAllGrantBookInfo()
+        /// <summary>
+        /// 获取学生信息的方法
+        /// </summary>
+        /// <param name="TypeID">可以选择sql语句的调用</param>
+        /// <param name="ID">ID可以表示学院信息ID   也可以表示班级信息ID</param>
+        /// <returns></returns>
+        public List<GrantBookBusiness> GetAllGrantBookInfo(int TypeID, int ID)
         {
             List<GrantBookBusiness> list = new List<GrantBookBusiness>();
-            string sql = "SELECT  CollegeInfo.CollegeName,Course.CourseType, MajorInfo.MajorSimple, GradeInfo.GradeSimple, SchoolTerm.TermName, StudentInfo.StudentName,StudentInfo.StudentNumber, StudentInfo.StudentSex, StudentClass.ClassName, GrantBook.GetBookNum, PlanBook.CourseName, PlanBook.BookName,PlanBook.CourseName, PlanBook.ISBN, PlanBook.Author, PlanBook.Publish FROM GradeInfo INNER JOIN StudentClass ON GradeInfo.GradeInfoID = StudentClass.GradeInfoID INNER JOIN CollegeInfo ON StudentClass.CollegeID = CollegeInfo.CollegeID INNER JOIN MajorInfo ON StudentClass.MajorInfoID = MajorInfo.MajorInfoID INNER JOIN PlanBook INNER JOIN GrantBook ON PlanBook.PlanBookID = GrantBook.PlanBookID INNER JOIN StudentInfo ON GrantBook.StudentInfoID = StudentInfo.StudentInfoID ON StudentClass.StudentClassID = StudentInfo.StudentClassID INNER JOIN Course on Course.CourseID=PlanBook.CourseID INNER JOIN SchoolTerm ON GrantBook.SchoolTermID = SchoolTerm.SchoolTermID";
-            using (SqlDataReader sdr = DBHelpers.GetAllInfo(sql))
+            StringBuilder sql = new StringBuilder("SELECT  CollegeInfo.CollegeName,Course.CourseType, MajorInfo.MajorSimple, GradeInfo.GradeSimple, SchoolTerm.TermName, StudentInfo.StudentName,StudentInfo.StudentNumber, StudentInfo.StudentSex, StudentClass.ClassName, GrantBook.GetBookNum, PlanBook.CourseName, PlanBook.BookName,PlanBook.CourseName, PlanBook.ISBN, PlanBook.Author, PlanBook.Publish FROM GradeInfo INNER JOIN StudentClass ON GradeInfo.GradeInfoID = StudentClass.GradeInfoID INNER JOIN CollegeInfo ON StudentClass.CollegeID = CollegeInfo.CollegeID INNER JOIN MajorInfo ON StudentClass.MajorInfoID = MajorInfo.MajorInfoID INNER JOIN PlanBook INNER JOIN GrantBook ON PlanBook.PlanBookID = GrantBook.PlanBookID INNER JOIN StudentInfo ON GrantBook.StudentInfoID = StudentInfo.StudentInfoID ON StudentClass.StudentClassID = StudentInfo.StudentClassID INNER JOIN Course on Course.CourseID=PlanBook.CourseID INNER JOIN SchoolTerm ON GrantBook.SchoolTermID = SchoolTerm.SchoolTermID where 1=1 ");
+            if (TypeID == 0) { sql.ToString(); }
+            if (TypeID == 1)
+            {
+                sql.Append(string.Format(" and CollegeInfo.CollegeID ={0}", ID));
+            }
+            if (TypeID == 2)
+            {
+                sql.Append(string.Format(" and StudentClass.StudentClassID ={0}", ID));
+            }
+            using (SqlDataReader sdr = DBHelpers.GetAllInfo(sql.ToString()))
             {
                 while (sdr.Read())
                 {
                     GrantBookBusiness grant = new GrantBookBusiness();
                     grant.CollegeName = sdr["CollegeName"].ToString();
                     grant.MajorSimple = sdr["MajorSimple"].ToString();
-                    grant.GradeSimple = sdr["GradeSimple"].ToString();
+                    //grant.GradeSimple = sdr["GradeSimple"].ToString();
                     grant.TermName = sdr["TermName"].ToString();
                     grant.ClassName= sdr["ClassName"].ToString();
                     grant.StudentName = sdr["StudentName"].ToString();

@@ -11,6 +11,7 @@ namespace ManageBook.Modle
         /// 教材发放明细的业务实体类
         /// </summary>
         public string CollegeName { get; set; } //学院名称
+        public int GrantID { get; set; } //教材方法明细编号
         public string MajorSimple { get; set; } //专业简称
         public string GradeSimple { get; set; } //年级简称
         public string TermName { get; set; }  //学年学期

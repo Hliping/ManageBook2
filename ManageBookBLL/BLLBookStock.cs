@@ -29,14 +29,19 @@ namespace ManageBook.BLL
             return dalbs.NoArriveBook();
         }
 
-        public DataSet BookStock()
+
+        private DataTable dt;
+        /// <summary>
+        /// 返回类型改成DataTable
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="bookStock"></param>
+        /// <returns></returns>
+        public DataTable GetAllBookStock(int index, string bookStock)
         {
-            return dalbs.BookStock();
-        
-        }
-        public IList<BookStock> GetAllBookStock()
-        {
-            return dalbs.GetAllBookStock();
+            dt = dalbs.GetAllBookStock(index, bookStock).Tables[0];
+            return dt;
+
         }
     }
 }

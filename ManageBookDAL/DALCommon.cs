@@ -79,6 +79,26 @@ namespace ManageBook.DAL
 
             return list;
         }
+
+        public List<StudentClass> GetAllStudentClassbyMajorId(int MajorInfoID)
+        {
+            StudentClass student;
+            List<StudentClass> list = new List<StudentClass>();
+            string sql = "select * from StudentClass where MajorInfoID=@MajorInfoID";
+            SqlParameter[] parameter = { new SqlParameter("@MajorInfoID", SqlDbType.Int) };
+            parameter[0].Value = MajorInfoID;
+            using (SqlDataReader sdr = DBHelpers.GetAllInfo(sql, parameter))
+            {
+                while (sdr.Read())
+                {
+                    student = new StudentClass();
+                    student.StudentClassID = int.Parse(sdr["StudentClassID"].ToString());
+                    student.ClassName = sdr["ClassName"].ToString();
+                    list.Add(student);
+                }
+            }
+            return list;
+        }
         public List<StudentClass> GetAllStudentClass(int majorInfoID,int gradeInfoID) //以专业编号和年级编号获取班级信息的方法
         {
             StudentClass student;

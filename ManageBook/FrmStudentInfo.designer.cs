@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvQuery = new System.Windows.Forms.DataGridView();
             this.学生信息编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.班别编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +78,10 @@
             // 
             this.dgvQuery.AllowUserToAddRows = false;
             this.dgvQuery.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvQuery.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvQuery.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvQuery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuery.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.学生信息编号,
@@ -89,9 +95,12 @@
             this.学号,
             this.备注});
             this.dgvQuery.ContextMenuStrip = this.cntxtms;
+            this.dgvQuery.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dgvQuery.Location = new System.Drawing.Point(351, 94);
             this.dgvQuery.Name = "dgvQuery";
             this.dgvQuery.ReadOnly = true;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvQuery.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvQuery.RowTemplate.Height = 23;
             this.dgvQuery.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQuery.Size = new System.Drawing.Size(976, 572);
@@ -379,7 +388,7 @@
             this.cmbStudentClass.Name = "cmbStudentClass";
             this.cmbStudentClass.Size = new System.Drawing.Size(233, 27);
             this.cmbStudentClass.TabIndex = 7;
-            this.cmbStudentClass.Text = "——请选择班别——";
+            this.cmbStudentClass.Text = "——请选择班级——";
             this.cmbStudentClass.SelectedIndexChanged += new System.EventHandler(this.cmbStudentClass_SelectedIndexChanged);
             // 
             // cmbGrade

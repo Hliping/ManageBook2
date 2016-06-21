@@ -30,9 +30,10 @@
         {
             this.dgvBookStock = new System.Windows.Forms.DataGridView();
             this.grbBookStock = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtBookStock = new System.Windows.Forms.TextBox();
+            this.btnBookStock = new System.Windows.Forms.Button();
             this.cmbBookStock = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookStock)).BeginInit();
             this.grbBookStock.SuspendLayout();
             this.SuspendLayout();
@@ -51,14 +52,50 @@
             // 
             // grbBookStock
             // 
-            this.grbBookStock.Controls.Add(this.button1);
+            this.grbBookStock.Controls.Add(this.txtBookStock);
+            this.grbBookStock.Controls.Add(this.btnBookStock);
             this.grbBookStock.Controls.Add(this.cmbBookStock);
+            this.grbBookStock.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grbBookStock.Location = new System.Drawing.Point(95, 13);
             this.grbBookStock.Name = "grbBookStock";
             this.grbBookStock.Size = new System.Drawing.Size(1116, 100);
             this.grbBookStock.TabIndex = 1;
             this.grbBookStock.TabStop = false;
             this.grbBookStock.Text = "查询";
+            // 
+            // txtBookStock
+            // 
+            this.txtBookStock.Location = new System.Drawing.Point(609, 33);
+            this.txtBookStock.Name = "txtBookStock";
+            this.txtBookStock.Size = new System.Drawing.Size(205, 26);
+            this.txtBookStock.TabIndex = 2;
+            // 
+            // btnBookStock
+            // 
+            this.btnBookStock.Location = new System.Drawing.Point(855, 61);
+            this.btnBookStock.Name = "btnBookStock";
+            this.btnBookStock.Size = new System.Drawing.Size(75, 23);
+            this.btnBookStock.TabIndex = 1;
+            this.btnBookStock.Text = "查询";
+            this.btnBookStock.UseVisualStyleBackColor = true;
+            this.btnBookStock.Click += new System.EventHandler(this.btnBookStock_Click);
+            // 
+            // cmbBookStock
+            // 
+            this.cmbBookStock.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbBookStock.FormattingEnabled = true;
+            this.cmbBookStock.Items.AddRange(new object[] {
+            "———全部———",
+            "教材名称",
+            "ISBN码",
+            "作者",
+            "出版社"});
+            this.cmbBookStock.Location = new System.Drawing.Point(334, 34);
+            this.cmbBookStock.Name = "cmbBookStock";
+            this.cmbBookStock.Size = new System.Drawing.Size(243, 24);
+            this.cmbBookStock.TabIndex = 0;
+            this.cmbBookStock.Text = "———全部———";
+            this.cmbBookStock.SelectionChangeCommitted += new System.EventHandler(this.cmbBookStock_SelectionChangeCommitted);
             // 
             // label1
             // 
@@ -69,25 +106,6 @@
             this.label1.Size = new System.Drawing.Size(93, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "库存";
-            // 
-            // cmbBookStock
-            // 
-            this.cmbBookStock.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbBookStock.FormattingEnabled = true;
-            this.cmbBookStock.Location = new System.Drawing.Point(334, 34);
-            this.cmbBookStock.Name = "cmbBookStock";
-            this.cmbBookStock.Size = new System.Drawing.Size(243, 24);
-            this.cmbBookStock.TabIndex = 0;
-            this.cmbBookStock.SelectionChangeCommitted += new System.EventHandler(this.cmbBookStock_SelectionChangeCommitted);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(855, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "查询";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FrmBookStock
             // 
@@ -103,6 +121,7 @@
             this.Load += new System.EventHandler(this.FrmBookStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookStock)).EndInit();
             this.grbBookStock.ResumeLayout(false);
+            this.grbBookStock.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,8 +131,9 @@
 
         private System.Windows.Forms.DataGridView dgvBookStock;
         private System.Windows.Forms.GroupBox grbBookStock;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBookStock;
         private System.Windows.Forms.ComboBox cmbBookStock;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBookStock;
     }
 }

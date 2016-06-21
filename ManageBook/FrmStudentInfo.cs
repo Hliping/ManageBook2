@@ -213,6 +213,7 @@ namespace ManageBook
         {
             if (Convert.ToInt32(cmbStudentClass.SelectedValue) > 0) { btnAppend.Enabled = true; }
         }
+
     }
 
 }

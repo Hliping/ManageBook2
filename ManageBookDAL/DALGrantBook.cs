@@ -43,7 +43,7 @@ namespace ManageBook.DAL
         public List<BookStockBusiness> GetAllBookStock(int TypeID, int ID)
         {
             List<BookStockBusiness> list = new List<BookStockBusiness>();
-            StringBuilder sql = new StringBuilder("SELECT PlanBook.PlanBookID, StudentClass.ClassName, SchoolTerm.TermSimple, Course.CourseType,PlanBook.CourseName, PlanBook.BookName, PlanBook.ISBN as 'ISBN', PlanBook.Author,PlanBook.SchoolTermID, PlanBook.Publish,PlanBook.BookTotalNum FROM  BookStock INNER JOIN PlanBook ON BookStock.PlanBookID = PlanBook.PlanBookID INNER JOIN SchoolTerm ON PlanBook.SchoolTermID = SchoolTerm.SchoolTermID INNER JOIN StudentClass ON PlanBook.StudentClassID = StudentClass.StudentClassID INNER JOIN CollegeInfo on CollegeInfo.CollegeID=StudentClass.CollegeID INNER JOIN Course ON PlanBook.CourseID = Course.CourseID where 1=1");
+            StringBuilder sql = new StringBuilder("SELECT PlanBook.PlanBookID, StudentClass.ClassName, SchoolTerm.TermSimple, Course.CourseType,PlanBook.CourseName, PlanBook.BookName, PlanBook.ISBN as 'ISBN', PlanBook.Author,PlanBook.SchoolTermID, PlanBook.Publish,PlanBook.BookTotalNum FROM  BookStock INNER JOIN PlanBook ON BookStock.PlanBookID = PlanBook.PlanBookID INNER JOIN SchoolTerm ON PlanBook.SchoolTermID = SchoolTerm.SchoolTermID INNER JOIN StudentClass ON PlanBook.StudentClassID = StudentClass.StudentClassID INNER JOIN CollegeInfo on CollegeInfo.CollegeID=StudentClass.CollegeID INNER JOIN Course ON PlanBook.CourseID = Course.CourseID where PlanBook.isBookStock=1 ");
             if (TypeID == 0) { sql.ToString(); }
             if (TypeID == 1)
             {

@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using Microsoft.Office.Interop.Excel;
+
 using ManageBook.BLL;
-using ManageBook.Modle;
+
 
 
 namespace ManageBook
@@ -68,7 +68,7 @@ namespace ManageBook
             }
         }
 
-        public bool data(DataGridView dgv, bool flag) 
+        private bool data(DataGridView dgv, bool flag) 
         {
             if (dgv.Rows.Count == 0) 
             {
@@ -88,7 +88,7 @@ namespace ManageBook
                      Excel.Cells[i + 2 , j + 1] = dgv[j, i].Value.ToString();
                 }
             }
-                return true;
+            return true;
         }
 
         private void button1_Click(object sender, EventArgs e)

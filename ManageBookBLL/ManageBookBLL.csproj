@@ -44,10 +44,10 @@
     <Compile Include="BLLExamineBook.cs" />
     <Compile Include="BLLExcel.cs" />
     <Compile Include="BLLGetBook.cs" />
-    <Compile Include="BLLGetBookBusiness.cs" />
     <Compile Include="BLLGrantBook.cs" />
     <Compile Include="BLLOrder.cs" />
     <Compile Include="BLLPlanBook.cs" />
+    <Compile Include="BLLStudentExpense.cs" />
     <Compile Include="BLLStudentInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BLLResultExamine.cs" />

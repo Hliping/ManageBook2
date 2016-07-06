@@ -14,6 +14,7 @@ namespace ManageBook
         public FrmMain()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,6 +91,13 @@ namespace ManageBook
         {
             FrmGrantBook frm = new FrmGrantBook();
             FrmShow(frm);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            pnlMainCentre.Controls.Clear();
+            pnlMainCentre.Controls.Add(pnlNav);
+            btnPlanBook.Show();
         }
     }
 }

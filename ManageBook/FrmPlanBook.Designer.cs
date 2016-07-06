@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbCourseType = new System.Windows.Forms.ComboBox();
             this.cmbSchoolTerm = new System.Windows.Forms.ComboBox();
@@ -73,7 +73,7 @@
             this.groupBox1.Controls.Add(this.cmbStudentClass);
             this.groupBox1.Controls.Add(this.cmbCollege);
             this.groupBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 22);
+            this.groupBox1.Location = new System.Drawing.Point(15, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(326, 265);
             this.groupBox1.TabIndex = 0;
@@ -83,30 +83,33 @@
             // cmbCourseType
             // 
             this.cmbCourseType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCourseType.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbCourseType.FormattingEnabled = true;
-            this.cmbCourseType.Location = new System.Drawing.Point(69, 227);
+            this.cmbCourseType.Location = new System.Drawing.Point(45, 219);
             this.cmbCourseType.Name = "cmbCourseType";
-            this.cmbCourseType.Size = new System.Drawing.Size(170, 24);
+            this.cmbCourseType.Size = new System.Drawing.Size(233, 27);
             this.cmbCourseType.TabIndex = 4;
             this.cmbCourseType.Text = "——请选择类型——";
             // 
             // cmbSchoolTerm
             // 
             this.cmbSchoolTerm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSchoolTerm.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbSchoolTerm.FormattingEnabled = true;
-            this.cmbSchoolTerm.Location = new System.Drawing.Point(69, 107);
+            this.cmbSchoolTerm.Location = new System.Drawing.Point(45, 99);
             this.cmbSchoolTerm.Name = "cmbSchoolTerm";
-            this.cmbSchoolTerm.Size = new System.Drawing.Size(170, 24);
+            this.cmbSchoolTerm.Size = new System.Drawing.Size(233, 27);
             this.cmbSchoolTerm.TabIndex = 3;
             this.cmbSchoolTerm.Text = "——请选择学期——";
             // 
             // cmbStudentClass
             // 
             this.cmbStudentClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbStudentClass.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbStudentClass.FormattingEnabled = true;
-            this.cmbStudentClass.Location = new System.Drawing.Point(69, 166);
+            this.cmbStudentClass.Location = new System.Drawing.Point(45, 158);
             this.cmbStudentClass.Name = "cmbStudentClass";
-            this.cmbStudentClass.Size = new System.Drawing.Size(170, 24);
+            this.cmbStudentClass.Size = new System.Drawing.Size(233, 27);
             this.cmbStudentClass.TabIndex = 2;
             this.cmbStudentClass.Text = "——请选择班级——";
             this.cmbStudentClass.SelectionChangeCommitted += new System.EventHandler(this.cmbStudentClass_SelectionChangeCommitted);
@@ -114,10 +117,11 @@
             // cmbCollege
             // 
             this.cmbCollege.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCollege.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbCollege.FormattingEnabled = true;
-            this.cmbCollege.Location = new System.Drawing.Point(69, 48);
+            this.cmbCollege.Location = new System.Drawing.Point(45, 40);
             this.cmbCollege.Name = "cmbCollege";
-            this.cmbCollege.Size = new System.Drawing.Size(170, 24);
+            this.cmbCollege.Size = new System.Drawing.Size(233, 27);
             this.cmbCollege.TabIndex = 0;
             this.cmbCollege.Text = "——请选择学院——";
             this.cmbCollege.SelectionChangeCommitted += new System.EventHandler(this.cmbCollege_SelectionChangeCommitted);
@@ -126,35 +130,35 @@
             // 
             this.dgvPlanBook.AllowUserToAddRows = false;
             this.dgvPlanBook.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlanBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlanBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPlanBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlanBook.ContextMenuStrip = this.cntxtms;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPlanBook.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPlanBook.Location = new System.Drawing.Point(12, 360);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPlanBook.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPlanBook.Location = new System.Drawing.Point(17, 388);
             this.dgvPlanBook.Name = "dgvPlanBook";
             this.dgvPlanBook.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlanBook.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlanBook.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPlanBook.RowTemplate.Height = 23;
             this.dgvPlanBook.Size = new System.Drawing.Size(1311, 280);
             this.dgvPlanBook.TabIndex = 1;
@@ -200,7 +204,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(359, 32);
+            this.groupBox2.Location = new System.Drawing.Point(363, 32);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(964, 255);
             this.groupBox2.TabIndex = 2;
@@ -295,7 +299,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(491, 215);
+            this.label8.Location = new System.Drawing.Point(495, 215);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 19);
             this.label8.TabIndex = 19;
@@ -315,7 +319,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(67, 102);
+            this.label5.Location = new System.Drawing.Point(63, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 19);
             this.label5.TabIndex = 16;
@@ -335,7 +339,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(57, 38);
+            this.label2.Location = new System.Drawing.Point(45, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 19);
             this.label2.TabIndex = 13;
@@ -345,7 +349,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(518, 38);
+            this.label1.Location = new System.Drawing.Point(514, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 19);
             this.label1.TabIndex = 12;
@@ -354,7 +358,7 @@
             // btnOK
             // 
             this.btnOK.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOK.Location = new System.Drawing.Point(1165, 317);
+            this.btnOK.Location = new System.Drawing.Point(1204, 329);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(123, 31);
             this.btnOK.TabIndex = 3;
@@ -365,17 +369,18 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 336);
+            this.label9.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Location = new System.Drawing.Point(17, 353);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 12);
+            this.label9.Size = new System.Drawing.Size(114, 19);
             this.label9.TabIndex = 5;
-            this.label9.Text = "已经提交的订单:";
+            this.label9.Text = "待审核订单:";
             // 
             // FrmPlanBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1335, 652);
+            this.ClientSize = new System.Drawing.Size(1340, 680);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dgvPlanBook);

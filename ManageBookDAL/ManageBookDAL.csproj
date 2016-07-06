@@ -42,12 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonStatic.cs" />
+    <Compile Include="DALAdmin.cs" />
     <Compile Include="DALBookStock.cs" />
     <Compile Include="DALCommon.cs" />
     <Compile Include="DALExamineBook.cs" />
     <Compile Include="DALExcel.cs" />
     <Compile Include="DALGetBook.cs" />
     <Compile Include="DALGrantBook.cs" />
+    <Compile Include="DALNoArriveBook.cs" />
     <Compile Include="DALOrder.cs" />
     <Compile Include="DALPlanBook.cs" />
     <Compile Include="DALStudentExpense.cs" />

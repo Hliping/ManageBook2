@@ -85,7 +85,7 @@
             this.dgvInfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvInfo.RowTemplate.Height = 23;
             this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfo.Size = new System.Drawing.Size(1324, 495);
+            this.dgvInfo.Size = new System.Drawing.Size(1313, 487);
             this.dgvInfo.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -121,7 +121,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.bdnInfo);
-            this.panel1.Location = new System.Drawing.Point(297, 611);
+            this.panel1.Location = new System.Drawing.Point(297, 600);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(923, 24);
             this.panel1.TabIndex = 2;
@@ -262,7 +262,7 @@
             this.groupBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1311, 91);
+            this.groupBox1.Size = new System.Drawing.Size(1313, 90);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询：";
@@ -298,7 +298,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(206, 40);
+            this.label1.Location = new System.Drawing.Point(206, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 19);
             this.label1.TabIndex = 1;
@@ -317,7 +317,7 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(185, 640);
+            this.txtRemark.Location = new System.Drawing.Point(185, 636);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(401, 38);
@@ -327,7 +327,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(8, 647);
+            this.label3.Location = new System.Drawing.Point(8, 643);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 19);
             this.label3.TabIndex = 6;
@@ -347,7 +347,7 @@
             // btnAllExamine
             // 
             this.btnAllExamine.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAllExamine.Location = new System.Drawing.Point(1059, 642);
+            this.btnAllExamine.Location = new System.Drawing.Point(1059, 640);
             this.btnAllExamine.Name = "btnAllExamine";
             this.btnAllExamine.Size = new System.Drawing.Size(132, 29);
             this.btnAllExamine.TabIndex = 9;
@@ -358,7 +358,7 @@
             // btnAllNoExamine
             // 
             this.btnAllNoExamine.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAllNoExamine.Location = new System.Drawing.Point(1197, 641);
+            this.btnAllNoExamine.Location = new System.Drawing.Point(1197, 639);
             this.btnAllNoExamine.Name = "btnAllNoExamine";
             this.btnAllNoExamine.Size = new System.Drawing.Size(135, 29);
             this.btnAllNoExamine.TabIndex = 10;
@@ -368,7 +368,7 @@
             // 
             // btnRemark1
             // 
-            this.btnRemark1.Location = new System.Drawing.Point(611, 648);
+            this.btnRemark1.Location = new System.Drawing.Point(592, 644);
             this.btnRemark1.Name = "btnRemark1";
             this.btnRemark1.Size = new System.Drawing.Size(75, 23);
             this.btnRemark1.TabIndex = 11;
@@ -380,7 +380,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1339, 679);
+            this.ClientSize = new System.Drawing.Size(1340, 680);
             this.Controls.Add(this.btnRemark1);
             this.Controls.Add(this.btnRemark);
             this.Controls.Add(this.panel1);

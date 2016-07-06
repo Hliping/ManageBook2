@@ -17,7 +17,7 @@ namespace ManageBook.DAL
         {
             string sql = "Update BookStock set ArriveQuantity=@ArriveQuantity,NoArriveQuantity=@NoArriveQuantity,NetPrice=@NetPrice,Discount=@Discount,Arrived='true' where BookStock.PlanBookID = (select PlanBook.PlanBookID from PlanBook where ISBN=@ISBN)";
             SqlParameter[] parameter = { new SqlParameter("@ArriveQuantity", SqlDbType.Int),
-                                           new SqlParameter("@NoArriveQuantity",SqlDbType.Int),
+                                         new SqlParameter("@NoArriveQuantity",SqlDbType.Int),
                                          new SqlParameter("@NetPrice",SqlDbType.Float),
                                          new SqlParameter("@Discount",SqlDbType.Float),
                                          new SqlParameter("@ISBN",SqlDbType.VarChar)
@@ -72,12 +72,19 @@ namespace ManageBook.DAL
 
         public DataSet NoArriveBook()
         {
-            string sql = "SELECT PlanBook.BookName as '教材名称', PlanBook.ISBN as 'ISBN码', PlanBook.Author as '作者', PlanBook.Publish as '出版社', PlanBook.Price as '标价', PlanBook.BookTotalNum as '订购数量', BookStock.ArriveQuantity as '已到数量',BookStock.NoArriveQuantity as '未到数量' FROM PlanBook INNER JOIN BookStock ON PlanBook.PlanBookID = BookStock.PlanBookID where BookStock.NoArriveQuantity>0";
+            string sql = "SELECT BookStock.BookStockID ,PlanBook.BookName, PlanBook.ISBN, PlanBook.Author, PlanBook.Publish, PlanBook.Price, PlanBook.BookTotalNum, BookStock.ArriveQuantity ,BookStock.NoArriveQuantity  FROM PlanBook INNER JOIN BookStock ON PlanBook.PlanBookID = BookStock.PlanBookID where BookStock.NoArriveQuantity>0";
             return DBHelpers.GetAllInfoToDataSet(sql);
+
         }
 
 
 
+        /// <summary>
+        /// 教材库存所有数据查询和按条件查询
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="bookStock"></param>
+        /// <returns></returns>
         public DataSet GetAllBookStock(int index, string bookStock)
         {
             using (SqlConnection conn = new SqlConnection(DBHelpers.Connection))
@@ -118,18 +125,10 @@ namespace ManageBook.DAL
                     cmd.Parameters.AddWithValue("@Publish", "%" + bookStock + "%");
 
                 }
-                if (index == 5)
-                {
-                    sql.Append(" and BookStock.Arrived='false'");
-                    cmd.CommandText = sql.ToString();
-
-                }
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 ds = new DataSet();
-
                 sda.Fill(ds);
-
                 return ds;
             }
 

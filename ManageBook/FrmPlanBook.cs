@@ -31,7 +31,10 @@ namespace ManageBook
             //dgvPlanBook.DataSource = planbook.DelectPlanBook();
         }
 
-        private void CmbData()  //查询各个表的信息赋值给下拉框
+        /// <summary>
+        /// 查询各个表的信息赋值给下拉框
+        /// </summary>
+        private void CmbData()  
         {
             //cmbCollege.Items.Insert(0, "——请选择学院——"); //添加下拉框第一项的值
             List<CollegeInfo> collegeinfo = common.GetAllCollegeInfo();         //调用GetAllCollegeInfo()方法获取学院信息并赋值给数组a
@@ -41,6 +44,9 @@ namespace ManageBook
             cmbCollege.ValueMember = "CollegeID";
         }
 
+        /// <summary>
+        /// 查询各个表的信息赋值给下拉框
+        /// </summary>
         private void cmbData()
         {
             List<SchoolTerm> studentclass = common.GetAllSchoolTerm();
@@ -56,6 +62,11 @@ namespace ManageBook
             cmbCourseType.ValueMember = "CourseID";
         }
 
+        /// <summary>
+        /// 学院下拉框值改变事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbCollege_SelectionChangeCommitted(object sender, EventArgs e)
         {
 
@@ -65,7 +76,10 @@ namespace ManageBook
             //cmbStudentClass.ValueMember = "StudentClassID";
             //cmbStudentClass.DisplayMember = "ClassName";
         }
-
+        /// <summary>
+        /// 以学院编号绑定班级下拉框数据的事件
+        /// </summary>
+        /// <param name="collegeID"></param>
         private void cmbstudentclass(int collegeID)
         {
             List<StudentClass> studentclass = common.GetAllStudentClass(collegeID);
@@ -74,45 +88,47 @@ namespace ManageBook
             cmbStudentClass.ValueMember = "StudentClassID";
             cmbStudentClass.DataSource = studentclass;
         }
-        public void PlanBookinfo()  //多表联合查询并且为列表绑定数据源
+        /// <summary>
+        /// 多表联合查询并且为列表绑定数据源
+        /// </summary>
+        public void PlanBookinfo()
         {
             dgvPlanBook.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //列表的选中为整行选中
             dgvPlanBook.DataSource = planbook.PlanBookinfo().Tables[0];     //为列表绑定数据源
         }
+        /// <summary>
+        /// 确认提交按钮的单击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (btnOK.Text == "确认提交")
             {
-                InsertPlanBook();
-                txtAuthor.Text = "";
-                txtBookName.Text = "";
-                txtCourseName.Text = "";
-                txtISBN.Text = "";
-                txtPrice.Text = "";
-                txtPublish.Text = "";
-                txtStudentBookNum.Text = "";
-                txtTeacherBookNum.Text = "";
+                InsertPlanBook(); 
             }
             if (btnOK.Text == "确认修改") 
             {
-                UpdatePlanBook();
-                txtAuthor.Text = "";
-                txtBookName.Text = "";
-                txtCourseName.Text = "";
-                txtISBN.Text = "";
-                txtPrice.Text = "";
-                txtPublish.Text = "";
-                txtStudentBookNum.Text = "";
-                txtTeacherBookNum.Text = "";
+                UpdatePlanBook();  
                 btnOK.Text = "确认提交";
             }
+            txtAuthor.Text = "";
+            txtBookName.Text = "";
+            txtCourseName.Text = "";
+            txtISBN.Text = "";
+            txtPrice.Text = "";
+            txtPublish.Text = "";
+            txtStudentBookNum.Text = "";
+            txtTeacherBookNum.Text = "";
             PlanBookinfo();
             //dgvPlanBook.DataSource = planbook.DelectPlanBook();
         }
 
-
-        private void InsertPlanBook()  //向数据库中添加一条记录
+        /// <summary>
+        /// 向数据库中添加一条记录的方法
+        /// </summary>
+        private void InsertPlanBook()  
         {
             PlanBook plan = new PlanBook();  //初始化实体类PlanBook
             try
@@ -137,15 +153,19 @@ namespace ManageBook
                 //throw;
             } 
         }
+        /// <summary>
+        /// 获取文本框的值赋给实体类里面变量的方法
+        /// </summary>
+        /// <returns></returns>
         private PlanBook txtText()
         {
             PlanBook plan = new PlanBook();  //初始化实体类PlanBook
-            plan.CourseName = txtCourseName.Text; //为实体类里面的字段赋值
-            plan.BookName = txtBookName.Text;
-            plan.Author = txtAuthor.Text;
-            plan.ISBN = txtISBN.Text;
+            plan.CourseName = txtCourseName.Text.Trim(); //为实体类里面的字段赋值
+            plan.BookName = txtBookName.Text.Trim();
+            plan.Author = txtAuthor.Text.Trim();
+            plan.ISBN = txtISBN.Text.Trim();
             plan.Price = float.Parse(txtPrice.Text.Trim());
-            plan.Publish = txtPublish.Text;
+            plan.Publish = txtPublish.Text.Trim();
             plan.StudentBookNum = int.Parse(txtStudentBookNum.Text.Trim());
             plan.TeacherBookNum = int.Parse(txtTeacherBookNum.Text.Trim());
 
@@ -163,6 +183,11 @@ namespace ManageBook
             return plan;
         }
 
+        /// <summary>
+        /// 右键删除的单击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cntxtmsDelete_Click(object sender, EventArgs e) //右键删除列表信息的方法
         {
             string isbn = dgvPlanBook.CurrentRow.Cells[7].Value.ToString();  //获取所选中的行  的名称为ISBN码的单元格  的值

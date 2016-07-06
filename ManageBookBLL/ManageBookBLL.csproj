@@ -39,12 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLAdmin.cs" />
     <Compile Include="BLLBookStock.cs" />
     <Compile Include="BLLCommon.cs" />
     <Compile Include="BLLExamineBook.cs" />
     <Compile Include="BLLExcel.cs" />
     <Compile Include="BLLGetBook.cs" />
     <Compile Include="BLLGrantBook.cs" />
+    <Compile Include="BLLNoArriveBook.cs" />
     <Compile Include="BLLOrder.cs" />
     <Compile Include="BLLPlanBook.cs" />
     <Compile Include="BLLStudentExpense.cs" />

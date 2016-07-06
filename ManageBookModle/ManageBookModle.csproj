@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
     <Compile Include="BookStock.cs" />
     <Compile Include="BookStockBusiness.cs" />
     <Compile Include="CollegeInfo.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="GrantBookBusiness.cs" />
     <Compile Include="MajorInfo.cs" />
     <Compile Include="ExamineBook.cs" />
+    <Compile Include="NoArriveBook.cs" />
     <Compile Include="PlanBook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolTerm.cs" />
